@@ -13,7 +13,7 @@ int main()
     int ddd = (int) round( (a - ccc) * pow(10, 3) );
 
     double result = ddd + ccc * pow(10, -3);
-    printf("%lg", result);
+    printf("%lg\n", result);
 
     return 0;
 }
