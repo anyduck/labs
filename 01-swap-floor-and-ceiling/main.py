@@ -6,7 +6,7 @@ def main():
 
     leg_b = (hypotenuse**2 - leg_a**2) ** 0.5  # Катет b за теоремою піфагора
     radius = (leg_a + leg_b - hypotenuse) / 2  # Радіус вписаного кола
-    print('Радіус вписаного кола (r):', radius)
+    print("Радіус вписаного кола (r):", radius)
 
 
 if __name__ == "__main__":
