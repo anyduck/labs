@@ -3,16 +3,17 @@
 
 
 int main() {
-    double a;                                        // Вхіде число виду ccc.ddd
+    double leg_a, leg_b,  // Катети (a та b)
+           hypotenuse,    // Гіпетенуза (c)
+           radius;        // Радіус вписаного кола
 
-    printf("Введіть число виду ccc.ddd: ");
-    scanf("%lf", &a);
+    printf("Введіть катет (a): "); scanf("%lf", &leg_a);
+    printf("Введіть гіпотенузу (c): "); scanf("%lf", &hypotenuse);
 
-    int ccc = (int) a;                               // Ціла частина вхідного числа
-    int ddd = (int) round( (a - ccc) * pow(10, 3) ); // Дробова частина вхідного чила
+    leg_b = sqrt(pow(hypotenuse, 2) - pow(leg_a, 2));  // Катет b за теоремою піфагора
+    radius = (leg_a + leg_b - hypotenuse) / 2;         // Радіус вписаного кола
 
-    double result = ddd + ccc * pow(10, -3);         // Кінцеве число виду ddd.ccc
-    printf("Кінцеве число виду ddd.ccc: %lg\n", result);
+    printf("Радіус вписаного кола (r): %lg\n", radius);
 
     return 0;
 }
