@@ -5,6 +5,7 @@ def main():
     b = float(input("Введіть число b: "))
     c = float(input("Введіть число c: "))
 
+    # Чи є хоча б одна пара чисел рівних між собою
     is_equal = (a == b) or (a == c) or (b == c)
 
     result = "є хоча б одна пара" if is_equal else "немає хоча б однієї пари"
