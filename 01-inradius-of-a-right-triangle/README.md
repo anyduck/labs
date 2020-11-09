@@ -1,10 +1,12 @@
 # Лабораторна 1
-### Геращенко Дмитро Ігорович, ІП-02, Варіант 27
+### Варіант 27, Геращенко Дмитро Ігорович, ІП-02
+
 ### Постановка задачі
 Дані гіпотенуза і катет прямокуткого трикутника. Знайти радіус вписаного у нього кола.
 
 ### Звіт
-[Лабораторна 1](https://github.com/moodduckk/pylabs/raw/master/reports/01-inradius-of-a-right-triangle.docx)
+[Лабораторна 1](https://github.com/moodduckk/labs/raw/master/reports/01-inradius-of-a-right-triangle.docx)
 
 ### Демонстрація
-![example](https://moodduckk.github.io/pylabs/examples/01-inradius-of-a-right-triangle.png)
+![python example](https://moodduckk.github.io/labs/examples/01-inradius-of-a-right-triangle-python.png)
+![cpp    example](https://moodduckk.github.io/labs/examples/01-inradius-of-a-right-triangle-cpp.png)

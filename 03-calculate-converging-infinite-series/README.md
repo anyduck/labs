@@ -1,5 +1,6 @@
 # Лабораторна 3
-### Геращенко Дмитро Ігорович, ІП-02, Варіант 19
+### Варіант 19, Геращенко Дмитро Ігорович, ІП-02
+
 ### Постановка задачі
 Обчислити
 <p align="center">
@@ -8,7 +9,8 @@
 для 0 ≤ x ≤ 2 з точністю до члена ряду, що менше 10<sup>-5</sup>
 
 ### Звіт
-[Лабораторна 3](https://github.com/moodduckk/pylabs/raw/master/reports/03-calculate-converging-infinite-series.docx)
+[Лабораторна 3](https://github.com/moodduckk/labs/raw/master/reports/03-calculate-converging-infinite-series.docx)
 
 ### Демонстрація
-![example](https://moodduckk.github.io/pylabs/examples/03-calculate-converging-infinite-series.png)
+![python example](https://moodduckk.github.io/labs/examples/03-calculate-converging-infinite-series-python.png)
+![cpp    example](https://moodduckk.github.io/labs/examples/03-calculate-converging-infinite-series-cpp.png)
