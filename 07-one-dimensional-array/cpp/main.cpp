@@ -21,7 +21,6 @@ int main() {
 
     int min, max, min_idx, max_idx;
     minmax(arr, size, min_idx, max_idx);
-
     print_diff(arr[max_idx], arr[min_idx]);
 
     exchange(arr[min_idx], arr[size-1]);
@@ -68,6 +67,6 @@ void print_array(string title, int arr[], int size) {
     cout << endl;
 }
 
-void print_diff(int a, int b) {
-    cout << "max - min = " << a << " - " << b << " = " << a-b << endl;
+void print_diff(int max, int min) {
+    cout << "max - min = " << max << " - " << min << " = " << max-min << endl;
 }
