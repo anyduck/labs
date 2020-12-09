@@ -1,29 +1,31 @@
-#include <stdio.h> // printf
+#include <iostream> // cout
+#include <iomanip> // setw
+#include <string> // string
 #include <ctime> // time
 #include <cmath> // rand
 
 using namespace std;
 
 void init(int [], int size); // ініціалізує початкий масив
-void output(int [], int size); // виводимо масив
 void minmax(int [], int size, int &min_idx, int &max_idx); // знаходить індекси мінімального і максимального елементів
-void exchange(int [], int idx1, int idx2); // змінює місцями два елементи масиву
+template <typename T> void exchange(T &, T &); // змінює місцями дві змінні
+void print_array(string title, int [], int size); // виводимо масив
+void print_diff(int, int); // виводимо різницю двох чисел
 
 int main() {
     const int size = 10;
     int arr[size];
 
     init(arr, size);
-    printf("%-30s", "Початковий масив:"); output(arr, size);
+    print_array("Початковий масив:", arr, size);
 
     int min, max, min_idx, max_idx;
     minmax(arr, size, min_idx, max_idx);
 
-    min = arr[min_idx]; max = arr[max_idx];
-    printf("max - min = %d - %d = %d\n", max, min, max-min);
+    print_diff(arr[max_idx], arr[min_idx]);
 
-    exchange(arr, min_idx, size-1);
-    printf("%-30s", "Кінцевий масив:"); output(arr, size);
+    exchange(arr[min_idx], arr[size-1]);
+    print_array("Кінцевий масив:", arr, size);
 
     return 0;
 }
@@ -33,12 +35,6 @@ void init(int arr[], int size) {
 
     for (int i = 0; i < size; i++)
         arr[i] = rand() % 19 -9;
-}
-
-void output(int arr[], int size) {
-    for (int i = 0; i < size; i++)
-        printf("%3d", arr[i]);
-    printf("\n");
 }
 
 void minmax(int arr[], int size, int &min_idx, int &max_idx) {
@@ -58,8 +54,20 @@ void minmax(int arr[], int size, int &min_idx, int &max_idx) {
     }
 }
 
-void exchange(int arr[], int idx1, int idx2) {
-    int temp = arr[idx1];
-    arr[idx1] = arr[idx2];
-    arr[idx2] = temp;
+template <typename T>
+void exchange(T &a, T &b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+void print_array(string title, int arr[], int size) {
+    cout << left << setw(30) << title << right;
+    for (int i = 0; i < size; i++)
+        cout << setw(3) << arr[i];
+    cout << endl;
+}
+
+void print_diff(int a, int b) {
+    cout << "max - min = " << a << " - " << b << " = " << a-b << endl;
 }
