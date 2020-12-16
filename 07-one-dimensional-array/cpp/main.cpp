@@ -33,7 +33,7 @@ void init(int arr[], int size) {
     srand(time(NULL));
 
     for (int i = 0; i < size; i++)
-        arr[i] = rand() % 19 -9;
+        arr[i] = rand() % 19 - 9;
 }
 
 void minmax(int arr[], int size, int &min_idx, int &max_idx) {

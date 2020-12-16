@@ -124,7 +124,7 @@ void insertion_sort_by_rows(int **matrix, int n, int (*key)(int[], int)) {
     for (int i = 1; i < n; i++) {
         assign_array(temp, matrix[i], n);             // temp = matrix[i]
         for (j = i; j >= 0 && ((*key)(matrix[j], n) < (*key)(temp, n)); j--)
-            assign_array(matrix[j+1], matrix[j], n);  // matrix[j] = matrix[j-1]
+            assign_array(matrix[j], matrix[j-1], n);  // matrix[j] = matrix[j-1]
         assign_array(matrix[j], temp, n);             // matrix[j] = temp
     }
     delete[] temp;
