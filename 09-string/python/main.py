@@ -5,10 +5,14 @@ def init() -> tuple[str, int]:
     """ Приймає вхідні дані користувача та перевіряє їх на валідність. """
 
     s = input("Введіть ваш текст: ")
-    if len(s) == 0: raise ValueError("Пустий рядок неприпустимий :(")
+
+    if len(s) == 0:
+        raise ValueError("Пустий рядок неприпустимий :(")
 
     length = int(input("Введіть необхідну довжину слів: "))
-    if length <= 0: raise ValueError("Довжинна повинна бути більша нуля :(")
+
+    if length <= 0:
+        raise ValueError("Довжинна повинна бути більша нуля :(")
 
     return s, length
 

@@ -1,7 +1,8 @@
-#include <iostream> // cout, getline
+#include <iostream> // cin, cout, getline
+#include <cstddef> // size_t
 #include <string> // string
-#include "strings.h" // split_into_words, filter_by_length, output
 
+#include "strings.h" // split_into_words_s, filter_by_length, output
 
 using namespace std;
 
@@ -17,7 +18,7 @@ int main() {
     if (is_valid(str, length)) {
 
         size_t size = 0;
-        string *words = split_into_words(str, &size, " .,?!'-();");
+        string *words = split_into_words_s(str, &size, " .,?!'-();");
         cout << "Всі слова:\n"; output(words, size);
 
         filter_by_length(words, &size, length);
